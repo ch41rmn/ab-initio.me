@@ -44,7 +44,7 @@ And for that, we get to have this:
 
 <center><img src="/favicon-32x32.png"/></center>
 
-## That's nice, but I don't have a Jekyll blog. How can I find this answer in the future?
+## That's nice, but I don't have a Jekyll blog. How can I find this post in the future?
 
 I googled this blog, "ab initio blog", and the results are ego-crushingly unrelated, only helped by the fact that my domain has only existed for 3 hours.
 

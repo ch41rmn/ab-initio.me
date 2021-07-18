@@ -12,5 +12,4 @@ Find yourself, and you will find the very thing hidden behind this page.
 Beyond here is something like a utopia.
 <br><br>
 This is a mirage.
-{: style="color:gray; text-align: center; width: 400px; margin: 0 auto; position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%)"}
 

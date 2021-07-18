@@ -29,7 +29,7 @@ description: |-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ab-initio.me"
 # twitter_username: jekyllrb
-github_username:  ch41rmn
+# github_username:  ch41rmn
 
 # Build settings
 theme: minima
