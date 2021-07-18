@@ -32,7 +32,7 @@ The first results from Google for "jekyll add favicon" are:
 
 Feeling unsupported, I did what any developer would do: open 5 StackOverflow threads. These threads are all variations of the same advice to add `<link rel="icon">` elements into the page header, which is fine except that I have no idea where the headers are defined.
 
-I then applied another typical link-prioritisation method: skip the Medium article and click on Google result #2 [[2]](#ref2). This took me to a small personal blog, also written in Jekyll, where I learned that the responsibility of favicons lies firmly with theme developers, and I began getting flashbacks from the golden days of messing with Wordpress themes.
+I then applied another typical link-prioritisation method: skip the Medium article and click on Google result #2 [[2]](#ref2). This took me to a small personal blog, also written in Jekyll, where I learned that the responsibility of favicons lies firmly with theme developers. I then began getting flashbacks from the golden days of messing with Wordpress themes.
 
 The instructions were ultimately helpful though, despite being rather verbose. Here is an abridged version for a time-poor engineer who wants a blog in a rush:
 - Create an `_includes/` folder in this jekyll site, anything in here will override the corresponding theme file.
@@ -48,11 +48,11 @@ And for that, we get to have this:
 
 I googled this blog, "ab initio blog", and the results are ego-crushingly unrelated, only helped by the fact that my domain has only existed for 3 hours.
 
-I then googled "github pages seo", and an official Github blog post from 2016 appeared at result #3 [[3]](#ref3). It told me I can simply add `{% raw %}{% raw %}{% seo %}{%{% endraw %} endraw %}` to the header template. This is neat, as we just created an override for that.
+I then googled "github pages seo", and an official Github blog post from 2016 appeared at result #3 [[3]](#ref3). It told me I can simply add `{% raw %}{% raw %}{% seo %}{%{% endraw %} endraw %}` to the header template, and then GitHub will tell Google to put me on the front page for absolutely everything. This is neat, as we just created an override for that.
 
 Upon looking, the header already has `{% raw %}{%- seo -%}{% endraw %}`. The difference then, I assume, might be due to improvements in the Jekyll syntax since 2016.
 
-All this means though, it is again *automagic*. So in a few days when I search again for "ab initio blog" again, I may have to think of another excuse as to why my domain doesn't appear.
+All this means though, it is again *automagic*. So in a few days when I search for "ab initio blog" again, I may have to think of another excuse as to why my domain doesn't appear.
 
 Or worse, I may have to actually learn the dark arts of SEO.
 
