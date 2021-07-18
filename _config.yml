@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: ab-initio.me
-# email: contact@ab-initio.me
+email: contact@ab-initio.me
 description: |-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ab-initio.me"
