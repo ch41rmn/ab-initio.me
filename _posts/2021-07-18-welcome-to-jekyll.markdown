@@ -6,7 +6,9 @@ categories: jekyll
 description: |
   Lessons in using Jekyll for the first time - Github actions, Jekyll favicon, and SEO
 ---
-GitHub Pages' support for Jekyll is almost perfect. Almost.
+This blog is built by Jekyll, which is a tool that allows software engineers who writes markdown documentation during work to also blog using markdown at night and on the weekends.
+
+And GitHub Pages' support for Jekyll is almost perfect. Almost.
 
 Time for a few quick lessons learned then.
 
