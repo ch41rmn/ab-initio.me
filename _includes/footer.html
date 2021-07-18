@@ -1,3 +1,20 @@
+<style>
+  .footer-col-1 {
+    width: calc(35% - (30px / 2));
+    width: -webkit-calc(35% - (30px / 2));
+  }
+  .footer-col-3 {
+    width: calc(65% - (30px / 2));
+    width: -webkit-calc(65% - (30px / 2));
+  }
+  @media screen and (max-width: 800px) {
+    .footer-col-3, .footer-col-1 {
+        width: -webkit-calc(100% - (30px / 2));
+        width: calc(100% - (30px / 2));
+    }
+  }
+</style>
+
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
@@ -9,20 +26,25 @@
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
           <li class="p-name">
-              {{ site.author | escape }} //
-              {{ site.title | escape }}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
+            //
+            {{ site.title | escape }} -
+            <a href="{{ site.src }}">view source</a>
+          </li>
+          {%- if site.email -%}
+          <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {%- endif -%}
+          <li>
+            powered by <a href="https://pages.github.com/">github pages</a>,
+            <a href="https://jekyllrb.com">jekyll</a>
+            and <a href="https://github.com/jekyll/minima">minima</a>.
+          </li>
         </ul>
       </div>
 <!--
       <div class="footer-col footer-col-2">
         {%- include social.html -%}
       </div> -->
-
-      <div class="footer-col footer-col-3" style="width:calc(65% - (30px / 2))!important">
+      <div class="footer-col footer-col-3">
         <p>{{- site.description | escape -}}</p>
       </div>
     </div>
