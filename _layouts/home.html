@@ -33,10 +33,15 @@ layout: default
             {{ post.title | escape }}
           </a>
         </h3>
+        {%- if site.show_post_description and post.description -%}
+            <p>{{ post.description }}</p>
+        {%- endif -%}
+
         {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- else if site.show_post_description -%}
-          {{ post.description }}
+            <p>
+                {{ post.excerpt }}
+                <a href="{{ post.url | relative_url }}" style="text-decoration: none; cursor: pointer;">...</a>
+            </p>
         {%- endif -%}
       </li>
       {%- endfor -%}
