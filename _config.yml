@@ -21,11 +21,11 @@
 title: ab-initio.me
 email: contact@ab-initio.me
 description: |-
-  This is a blog. I am a software engineer. "ab initio" is a Latin phrase meaning
-  "from first principles".
-  This blog is for my ramblings about working with abstractions upon
+  This is a blog. I am a software engineer. <i>ab initio</i> is a Latin phrase meaning
+  <i>from first principles</i>.
+  This blog is for me to ramble about working with abstractions upon
   abstractions upon abstractions, while also trying to understand the world
-  "from first principles".
+  <i>from first principles</i>.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ab-initio.me"
 src: "https://github.com/ch41rmn/ab-initio.me"
