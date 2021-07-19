@@ -32,6 +32,8 @@ src: "https://github.com/ch41rmn/ab-initio.me"
 # google_analytics: "ua-30029122-1"
 # twitter_username: jekyllrb
 # github_username:  ch41rmn
+show_excerpts: false
+show_post_description: true
 
 # Build settings
 theme: minima
