@@ -28,7 +28,7 @@ description: |-
   "from first principles".
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ab-initio.me"
-src: "https://github.com/ch41rmn/ch41rmn.github.io"
+src: "https://github.com/ch41rmn/ab-initio.me"
 # google_analytics: "ua-30029122-1"
 # twitter_username: jekyllrb
 # github_username:  ch41rmn
