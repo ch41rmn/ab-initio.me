@@ -72,7 +72,7 @@ def fix_body(lines: typing.List[str], ref_dict: dict) -> typing.List[str]:
             return matchobj.group(0)
 
     for line in lines:
-        pat = r'([\. ])(\[[0-9]+\])([ \n\)])'
+        pat = r'([\. ])(\[[0-9]+\])([,;\. \n\)])'
         yield re.sub(pat, sub_ref, line)
 
 
@@ -83,9 +83,9 @@ def main():
     new_after, new_tags = make_references(after)
 
     for line in fix_body(before, new_tags):
-        print(line)
+        print(line.rstrip())
     for line in new_after:
-        print(line)
+        print(line.rstrip())
 
     # print('\n'.join(new_after))
     # print(new_tags)
