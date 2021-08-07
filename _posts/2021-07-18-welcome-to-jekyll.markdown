@@ -63,7 +63,7 @@ And for all that, we get to have this:
 
 I googled this blog, the "ab initio blog". The results are ego-crushingly unrelated, only helped by the fact that this domain has only existed for 3 hours.
 
-I then googled "github pages seo", and an official Github blog post from 2016 appeared at result #3 [[4]](#ref4). It told me I can simply add `{% raw %}{% raw %}{% seo %}{%{% endraw %} endraw %}` to the header template. GitHub will then tell Google to put me on the front page for absolutely everything. This is neat, as we just learned how to add things into the header.
+I then googled "github pages seo", and an official Github blog post from 2016 appeared at result #3 [[5]](#ref-seo). It told me I can simply add `{% raw %}{% raw %}{% seo %}{%{% endraw %} endraw %}` to the header template. GitHub will then tell Google to put me on the front page for absolutely everything. This is neat, as we just learned how to add things into the header.
 
 It turns out my header already has `{% raw %}{%- seo -%}{% endraw %}`. The difference, I assume, might be due to improvements in the Jekyll syntax since 2016.
 
