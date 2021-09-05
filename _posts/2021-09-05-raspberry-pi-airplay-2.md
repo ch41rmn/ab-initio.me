@@ -11,7 +11,7 @@ This post is part of a series.
 - [Volume I]({% post_url 2021-08-07-raspberry-pi-airplay-2 %})
 - <b>Volume II</b> - You are here
 
-## The acquisition
+# The acquisition
 
 From the previous post, it was decided that a humble Raspberry Pi would be the heart
 of a vintage but also modern Audiophile system.
@@ -36,7 +36,7 @@ The humble ROCK Pi E and the not-so-humble Schiit Modius and Magnius
 </center>
 <br>
 
-## The linux bit
+# The linux bit
 
 This now gets into the technical setup of the Pi. The rest assumes you've already got
 a working Ubuntu distro onto the Pi.
@@ -95,7 +95,7 @@ $ speaker-test
 # this will say "0 - Front Left", but it will actually play in both channels
 ```
 
-## The shairport bit
+# The shairport bit
 
 The official documentation does a very good job at the installation steps for `shairport-sync`
 and its dependencies.
@@ -120,7 +120,7 @@ hostname is already very good. Some learnings I had to go through:
 - Naming the speaker "Audiophile" was a good choice. But I guess I could also have
   trolled Siri and named the device "Alexa".
 
-### Gotcha - missing home folder
+<b>Gotcha - missing home folder</b>
 
 When I started `shairport-sync` for the very first time, it immediately crashed
 and complained about a missing home folder. `shairport-sync` runs under its own user,
@@ -132,7 +132,7 @@ sudo mkdir -p /home/shairport-sync/.config/pulse
 sudo chown -R shairport-sync:shairport-sync /home/shairport-sync
 ```
 
-## The Apple Home bit
+# The Apple Home bit
 
 Now that shairport-sync is running, it should appear as one of the AirPlay destinations.
 
@@ -154,7 +154,7 @@ random reasons. A few things appeared to have helped though:
     attempt to reach the device over mobile internet.
 
 
-## Another gotcha - but don't worry, it's just for me. Bless open source.
+# Another gotcha - but don't worry, it's just for me. Bless open source.
 
 While trying to get shairport working on the Pi, I ran up against the error
 `"Can't find an AAC decoder!"`. All other aspects of the shairport-sync server
@@ -162,7 +162,7 @@ were perfect: it played nice with Apple Home, it showed up on AirPlay, it
 just didn't want to play any music...
 
 There was a week of head scratching, installing every iteration of AAC codecs
-I could find in ubuntu (there were many... `ffmpeg`, `fdkaac`, `faac`, `libavcodec-dev`,
+I could find in ubuntu (there were many, `ffmpeg`, `fdkaac`, `faac`, `libavcodec-dev`,
 `libavcodec-extra57`, `libavformat-dev`, `libfaac`, `libfdk-aac-dev`, `ubuntu-restricted-extras`,
 even `vlc`...), and still the same error persisted.
 
@@ -170,23 +170,24 @@ I eventually worked up the courage to check the source-code.
 I was preparing to file a bug on the development branch of a one-man open source
 project due to niche hardware, the very least I could do is to get a bit more
 debug output. But the gods of Google and StackOverflow smiled upon me that afternoon,
-and this blessed thread appeared on my browser [[5]](#ref-the-blessed-stackoverflow-thread), where the second answer with 0 votes
-pointed the path.
+and this blessed thread appeared on my browser [[5]](#ref-the-blessed-stackoverflow-thread).
+The second answer with 0 votes pointed the path.
 
 The crux of the problem was that my Pi was running Ubuntu 18 + ffmpeg 3.4,
-while the recommended Raspberry Pi 4 has Ubuntu 20 + ffmpeg 4.x. In ffmpeg 4.x,
-the list of codecs do not need to be explicitly discovered, but this is
-still needed in ffmpeg 3.4.
+while shairport-sync is developed against a Raspberry Pi 4, which has
+Ubuntu 20 + ffmpeg 4.x. In ffmpeg 4.x, the list of codecs do not need to be
+explicitly discovered, but this is still needed in ffmpeg 3.4.
 
-A small code change, another round of `make && make install`, then suddenly the
+A small code change, another round of `make && make install`, and suddenly the
 hills are alive with the sound of music. I went to sleep that night feeling triumphant.
-Even more triumphant was waking up and seeing that my PR was merged [[6]](#ref-a-small-pr).
+Even more triumphant was waking up and seeing that my PR was merged into
+`shairport-sync` already [[6]](#ref-a-small-pr). Kudos `@mikebrady`, you're a hell of a guy.
 
 So I hope, if you've stumbled across this... perhaps you are also trying to
 debug a gnarly problem. I hope the gods of Google and StackOverflow also smile
 upon you.
 
-## The final food for thought then
+# The final food for thought then
 
 All that challenge, for an AAC codec? Why does AirPlay 2 need to use a lossy codec
 such as AAC?
