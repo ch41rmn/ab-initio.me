@@ -1,11 +1,17 @@
 ---
 layout: post
 title:  "Smart streaming for a vintage audiophile - Volume I"
-date:   2021-07-18 16:38:15 +1000
+date:   2021-08-07 18:00:00 +1000
 categories: airplay pi music streaming
 description: |
   Finding a way to bring a fully analog vintage audio system to join the Smart Home movement.
 ---
+
+This post is part of a series.
+- <b>Volume I</b> - You are here
+- [Volume II]({% post_url 2021-09-05-raspberry-pi-airplay-2 %})
+
+# So you are an audiophile?
 
 Let's say you enjoy listening to music. This enjoyment slowly morphs into a relentless pursuit of quality. You buy some headphones, then some more expensive headphones, then dedicated amplifiers for your headphones. And before you know it, you are reading about USB jitters and why you should never trust a standard 3.5mm audio jack unless it has been blessed by one of three specific companies in the world. Like it or not, you are now an audiophile.
 
