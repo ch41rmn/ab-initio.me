@@ -1,3 +1,19 @@
+"""
+Fixes references in a blog post.
+
+Usage:
+    python make_refs.py < my_post.md | pbcopy
+
+Example input:
+```
+This is a reference [1]
+
+# References
+[1] Short name: https://url/to/reference
+```
+
+"""
+
 import os
 import typing
 import sys
